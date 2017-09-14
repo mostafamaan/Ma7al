@@ -1,0 +1,307 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CAA8544D1F6A78CE0024C634 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA8544C1F6A78CE0024C634 /* AppDelegate.swift */; };
+		CAA8544F1F6A78CE0024C634 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA8544E1F6A78CE0024C634 /* ViewController.swift */; };
+		CAA854521F6A78CE0024C634 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAA854501F6A78CE0024C634 /* Main.storyboard */; };
+		CAA854541F6A78CE0024C634 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAA854531F6A78CE0024C634 /* Assets.xcassets */; };
+		CAA854571F6A78CE0024C634 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAA854551F6A78CE0024C634 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CAA854491F6A78CE0024C634 /* Ma7al.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ma7al.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAA8544C1F6A78CE0024C634 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CAA8544E1F6A78CE0024C634 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CAA854511F6A78CE0024C634 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CAA854531F6A78CE0024C634 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CAA854561F6A78CE0024C634 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CAA854581F6A78CE0024C634 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CAA854461F6A78CE0024C634 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CAA854401F6A78CE0024C634 = {
+			isa = PBXGroup;
+			children = (
+				CAA8544B1F6A78CE0024C634 /* Ma7al */,
+				CAA8544A1F6A78CE0024C634 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CAA8544A1F6A78CE0024C634 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CAA854491F6A78CE0024C634 /* Ma7al.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CAA8544B1F6A78CE0024C634 /* Ma7al */ = {
+			isa = PBXGroup;
+			children = (
+				CAA8544C1F6A78CE0024C634 /* AppDelegate.swift */,
+				CAA8544E1F6A78CE0024C634 /* ViewController.swift */,
+				CAA854501F6A78CE0024C634 /* Main.storyboard */,
+				CAA854531F6A78CE0024C634 /* Assets.xcassets */,
+				CAA854551F6A78CE0024C634 /* LaunchScreen.storyboard */,
+				CAA854581F6A78CE0024C634 /* Info.plist */,
+			);
+			path = Ma7al;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CAA854481F6A78CE0024C634 /* Ma7al */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAA8545B1F6A78CE0024C634 /* Build configuration list for PBXNativeTarget "Ma7al" */;
+			buildPhases = (
+				CAA854451F6A78CE0024C634 /* Sources */,
+				CAA854461F6A78CE0024C634 /* Frameworks */,
+				CAA854471F6A78CE0024C634 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Ma7al;
+			productName = Ma7al;
+			productReference = CAA854491F6A78CE0024C634 /* Ma7al.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CAA854411F6A78CE0024C634 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = Mostafa;
+				TargetAttributes = {
+					CAA854481F6A78CE0024C634 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = HNCVYKA54Q;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = CAA854441F6A78CE0024C634 /* Build configuration list for PBXProject "Ma7al" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CAA854401F6A78CE0024C634;
+			productRefGroup = CAA8544A1F6A78CE0024C634 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CAA854481F6A78CE0024C634 /* Ma7al */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CAA854471F6A78CE0024C634 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAA854571F6A78CE0024C634 /* LaunchScreen.storyboard in Resources */,
+				CAA854541F6A78CE0024C634 /* Assets.xcassets in Resources */,
+				CAA854521F6A78CE0024C634 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CAA854451F6A78CE0024C634 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAA8544F1F6A78CE0024C634 /* ViewController.swift in Sources */,
+				CAA8544D1F6A78CE0024C634 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CAA854501F6A78CE0024C634 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAA854511F6A78CE0024C634 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CAA854551F6A78CE0024C634 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAA854561F6A78CE0024C634 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CAA854591F6A78CE0024C634 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CAA8545A1F6A78CE0024C634 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CAA8545C1F6A78CE0024C634 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HNCVYKA54Q;
+				INFOPLIST_FILE = Ma7al/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mostafa.Ma7al;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		CAA8545D1F6A78CE0024C634 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HNCVYKA54Q;
+				INFOPLIST_FILE = Ma7al/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mostafa.Ma7al;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CAA854441F6A78CE0024C634 /* Build configuration list for PBXProject "Ma7al" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAA854591F6A78CE0024C634 /* Debug */,
+				CAA8545A1F6A78CE0024C634 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAA8545B1F6A78CE0024C634 /* Build configuration list for PBXNativeTarget "Ma7al" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAA8545C1F6A78CE0024C634 /* Debug */,
+				CAA8545D1F6A78CE0024C634 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CAA854411F6A78CE0024C634 /* Project object */;
+}
