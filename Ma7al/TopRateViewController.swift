@@ -1,8 +1,8 @@
 //
-//  ViewController.swift
+//  TopRateViewController.swift
 //  Ma7al
 //
-//  Created by Mustafa on 9/14/17.
+//  Created by Mustafa on 9/24/17.
 //  Copyright © 2017 Mostafa. All rights reserved.
 //
 
@@ -10,11 +10,9 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 import CHTCollectionViewWaterfallLayout
+class TopRateViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,CHTCollectionViewDelegateWaterfallLayout  {
 
-class ViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,CHTCollectionViewDelegateWaterfallLayout {
-    
     @IBOutlet weak var collectionView: UICollectionView!
-    
     private var refresher:UIRefreshControl!
     private var firstRefresh = false
     //database refrence
@@ -34,16 +32,14 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         
         loadData {
             if !self.firstRefresh {
-               self.postsArray = self.postsArray.sorted(by: {$0.timeStamp > $1.timeStamp})
+                self.postsArray = self.postsArray.sorted(by: {$0.likes > $1.likes})
                 self.collectionView.reloadData()
                 
             }
             self.firstRefresh = true
-        
+            
         }
     }
-    
-    
     
     //MARK:-pull to refresh controll
     @objc private func refresh(sender:AnyObject)
@@ -53,7 +49,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         var refreshCheak = true
         loadData {
             if refreshCheak {
-                self.postsArray = self.postsArray.sorted(by: {$0.timeStamp > $1.timeStamp})
+                self.postsArray = self.postsArray.sorted(by: {$0.likes > $1.likes})
                 self.collectionView.reloadData()
                 self.refresher.endRefreshing()
                 self.ref.removeAllObservers()
@@ -74,8 +70,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     //MARK:-collection view delagete
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! PostsCollectionViewCell
-        print("hi")
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "topRateCell", for: indexPath) as! PostsCollectionViewCell
         let post = postsArray[indexPath.row]
         
         cell.configureCell(post:post)
@@ -94,7 +89,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         
         return CGSize(width: collectionView.bounds.size.width / 2 - 2, height: postHeightArray[indexPath.row])
     }
-
+    
     
     
     
@@ -102,20 +97,21 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     
     //MARK:-configure segues
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "detailedSegue" {
+       
+         if segue.identifier == "topRatedetailedSegue" {
             if let toViewController = segue.destination as? ProdactDetailedViewController {
                 if let cell = sender as? PostsCollectionViewCell {
                     toViewController.post = postsArray[cell.tag]
                 }
-                
             }
         }
     }
     
+    
     //MARK:-loading data from firebase
     private func loadData(completed:@escaping DownloadComplete){
         self.ref.child("posts").observe(.value, with:  {(snapshot) in
-      //  self.ref.child("posts").observeSingleEvent(of: .value, with: {(snapshot) in
+            //  self.ref.child("posts").observeSingleEvent(of: .value, with: {(snapshot) in
             self.postsArray.removeAll()
             
             if let snaps = snapshot.children.allObjects as? [DataSnapshot] {
@@ -133,9 +129,9 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
                         let images = dic["images"] as! [String:String]
                         let postHeight = dic["height"] as! CGFloat
                         let timeStamp = dic["timeStamp"] as! Int
-                    let post = Post.init(price: price, likes: likes, imageUrl: imageUrl, description: description, shopName: shopname,images:images,id:id,timeStamp:timeStamp)
-                            self.postsArray.append(post)
-                      
+                        let post = Post.init(price: price, likes: likes, imageUrl: imageUrl, description: description, shopName: shopname,images:images,id:id,timeStamp:timeStamp)
+                        self.postsArray.append(post)
+                        
                         
                         self.postHeightArray.append(postHeight)
                         
@@ -166,8 +162,8 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
                     "height" : 300.1,"timeStamp": ServerValue.timestamp()] as [String : Any]
         
         
-         ref.child("posts").childByAutoId().setValue(dict)
-       
+        ref.child("posts").childByAutoId().setValue(dict)
+        
     }
     @objc private func setupView() {
         self.automaticallyAdjustsScrollViewInsets = false
@@ -208,10 +204,4 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     }
     
 
-    
 }
-
-
-
-
-
