@@ -13,7 +13,7 @@ class PostsCollectionViewCell: UICollectionViewCell {
   
     @IBOutlet weak var containarView: UIView!
     
-    private let ref = Database.database().reference()
+  //  private let ref = Database.database().reference()
     private var id:String?
     let dataService = FireBaseDataService()
     
@@ -192,16 +192,16 @@ class PostsCollectionViewCell: UICollectionViewCell {
                 self.likeImageView.image = #imageLiteral(resourceName: "heart (1).png")
                 likes = likes! + 1
                 self.likeLabel.text = "\(likes!)"
-                self.ref.child("posts").child(self.id!).child("likes").setValue(likes)
-                self.ref.child("NormalUsers").child((Auth.auth().currentUser?.uid)!).child("likes").child(self.id!).setValue(true)
+                ref.child("posts").child(self.id!).child("likes").setValue(likes)
+                ref.child("NormalUsers").child((Auth.auth().currentUser?.uid)!).child("likes").child(self.id!).setValue(true)
 
             }
             else {
                 self.likeImageView.image = #imageLiteral(resourceName: "heart (3).png")
                 likes = likes! - 1
                 self.likeLabel.text = "\(likes!)"
-                self.ref.child("posts").child(self.id!).child("likes").setValue(likes)
-                self.ref.child("NormalUsers").child((Auth.auth().currentUser?.uid)!).child("likes").child(self.id!).removeValue()
+                ref.child("posts").child(self.id!).child("likes").setValue(likes)
+                ref.child("NormalUsers").child((Auth.auth().currentUser?.uid)!).child("likes").child(self.id!).removeValue()
 
             }
         })

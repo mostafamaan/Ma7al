@@ -14,6 +14,9 @@
 		CA6904281F78A3EA00FD9A11 /* Wooden-Board.png in Resources */ = {isa = PBXBuildFile; fileRef = CA6904271F78A2EE00FD9A11 /* Wooden-Board.png */; };
 		CA69042A1F78A4EF00FD9A11 /* shopping icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CA6904291F78A4E800FD9A11 /* shopping icon.png */; };
 		CA69042C1F78AB6B00FD9A11 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = CA69042B1F78AB5600FD9A11 /* logo.png */; };
+		CA69042E1F7DC0E400FD9A11 /* store.png in Resources */ = {isa = PBXBuildFile; fileRef = CA69042D1F7DC0C200FD9A11 /* store.png */; };
+		CA6904301F84AEF600FD9A11 /* addImage.png in Resources */ = {isa = PBXBuildFile; fileRef = CA69042F1F84AEEC00FD9A11 /* addImage.png */; };
+		CA8651761F97661400F1E7F7 /* CreateUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8651751F97661400F1E7F7 /* CreateUserModel.swift */; };
 		CA8DD4F61F6E8015003E9D6B /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DD4F51F6E8015003E9D6B /* Extentions.swift */; };
 		CA8DD4F81F6ECC5B003E9D6B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DD4F71F6ECC5B003E9D6B /* LoginViewController.swift */; };
 		CAA8544D1F6A78CE0024C634 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA8544C1F6A78CE0024C634 /* AppDelegate.swift */; };
@@ -58,6 +61,9 @@
 		CA6904271F78A2EE00FD9A11 /* Wooden-Board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Wooden-Board.png"; sourceTree = "<group>"; };
 		CA6904291F78A4E800FD9A11 /* shopping icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shopping icon.png"; sourceTree = "<group>"; };
 		CA69042B1F78AB5600FD9A11 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		CA69042D1F7DC0C200FD9A11 /* store.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = store.png; sourceTree = "<group>"; };
+		CA69042F1F84AEEC00FD9A11 /* addImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addImage.png; sourceTree = "<group>"; };
+		CA8651751F97661400F1E7F7 /* CreateUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateUserModel.swift; path = ../CreateUserModel.swift; sourceTree = "<group>"; };
 		CA8DD4F51F6E8015003E9D6B /* Extentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		CA8DD4F71F6ECC5B003E9D6B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CA8DD4F91F6ED05D003E9D6B /* Ma7al.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Ma7al.entitlements; sourceTree = "<group>"; };
@@ -121,6 +127,7 @@
 		CA8DD4F11F6E6ED8003E9D6B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CA8651751F97661400F1E7F7 /* CreateUserModel.swift */,
 				CAA8546D1F6AE2720024C634 /* Post.swift */,
 			);
 			name = Model;
@@ -179,7 +186,9 @@
 			children = (
 				CAA8546F1F6B90240024C634 /* like.png */,
 				CACD267A1F7282530049990E /* facebook-login-blue.png */,
+				CA69042D1F7DC0C200FD9A11 /* store.png */,
 				CA69042B1F78AB5600FD9A11 /* logo.png */,
+				CA69042F1F84AEEC00FD9A11 /* addImage.png */,
 				CA6904271F78A2EE00FD9A11 /* Wooden-Board.png */,
 				CAA854731F6BF7590024C634 /* heart60.png */,
 				CA6904291F78A4E800FD9A11 /* shopping icon.png */,
@@ -287,6 +296,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA6904301F84AEF600FD9A11 /* addImage.png in Resources */,
+				CA69042E1F7DC0E400FD9A11 /* store.png in Resources */,
 				CA69042C1F78AB6B00FD9A11 /* logo.png in Resources */,
 				CA69042A1F78A4EF00FD9A11 /* shopping icon.png in Resources */,
 				CA6904281F78A3EA00FD9A11 /* Wooden-Board.png in Resources */,
@@ -373,6 +384,7 @@
 				CACD26751F71B8DF0049990E /* UserViewController.swift in Sources */,
 				CAA8544D1F6A78CE0024C634 /* AppDelegate.swift in Sources */,
 				CAA854631F6A87B20024C634 /* extras.swift in Sources */,
+				CA8651761F97661400F1E7F7 /* CreateUserModel.swift in Sources */,
 				CACD26811F7681D30049990E /* FireBaseDataService.swift in Sources */,
 				CACD26831F7812150049990E /* TopRateViewController.swift in Sources */,
 				CA6904221F78729E00FD9A11 /* SignUpViewController.swift in Sources */,

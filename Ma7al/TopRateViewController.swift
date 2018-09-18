@@ -16,7 +16,7 @@ class TopRateViewController: UIViewController,UICollectionViewDelegate,UICollect
     private var refresher:UIRefreshControl!
     private var firstRefresh = false
     //database refrence
-    private let ref = Database.database().reference()
+  //  private let ref = Database.database().reference()
     
     //collection view datasource array
     private var postsArray = [Post]()
@@ -30,7 +30,7 @@ class TopRateViewController: UIViewController,UICollectionViewDelegate,UICollect
         setupView()
         setupCollectionView()
         
-        loadData {
+        loadData() {
             if !self.firstRefresh {
                 self.postsArray = self.postsArray.sorted(by: {$0.likes > $1.likes})
                 self.collectionView.reloadData()
@@ -39,7 +39,7 @@ class TopRateViewController: UIViewController,UICollectionViewDelegate,UICollect
             self.firstRefresh = true
             
         }
-    }
+        }
     
     //MARK:-pull to refresh controll
     @objc private func refresh(sender:AnyObject)
@@ -47,12 +47,12 @@ class TopRateViewController: UIViewController,UICollectionViewDelegate,UICollect
         
         postsArray.removeAll()
         var refreshCheak = true
-        loadData {
+        loadData() {
             if refreshCheak {
                 self.postsArray = self.postsArray.sorted(by: {$0.likes > $1.likes})
                 self.collectionView.reloadData()
                 self.refresher.endRefreshing()
-                self.ref.removeAllObservers()
+                ref.removeAllObservers()
             }
             refreshCheak = false
         }
@@ -110,7 +110,7 @@ class TopRateViewController: UIViewController,UICollectionViewDelegate,UICollect
     
     //MARK:-loading data from firebase
     private func loadData(completed:@escaping DownloadComplete){
-        self.ref.child("posts").observe(.value, with:  {(snapshot) in
+        ref.child("posts").observe(.value, with:  {(snapshot) in
             //  self.ref.child("posts").observeSingleEvent(of: .value, with: {(snapshot) in
             self.postsArray.removeAll()
             
@@ -140,6 +140,7 @@ class TopRateViewController: UIViewController,UICollectionViewDelegate,UICollect
                     
                 }
                 completed()
+                
             }
             
         })
@@ -183,6 +184,12 @@ class TopRateViewController: UIViewController,UICollectionViewDelegate,UICollect
         self.collectionView!.addSubview(refresher)
         //end
         
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.bounds.maxY == scrollView.contentSize.height {
+            print("im at the end")
+        }
     }
     
     

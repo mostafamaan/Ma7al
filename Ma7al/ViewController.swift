@@ -11,14 +11,14 @@ import Firebase
 import FirebaseDatabase
 import CHTCollectionViewWaterfallLayout
 
+
 class ViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,CHTCollectionViewDelegateWaterfallLayout {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
     private var refresher:UIRefreshControl!
     private var firstRefresh = false
-    //database refrence
-    private let ref = Database.database().reference()
+    
     
     //collection view datasource array
     private var postsArray = [Post]()
@@ -29,6 +29,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    
         setupView()
         setupCollectionView()
         
@@ -56,7 +57,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
                 self.postsArray = self.postsArray.sorted(by: {$0.timeStamp > $1.timeStamp})
                 self.collectionView.reloadData()
                 self.refresher.endRefreshing()
-                self.ref.removeAllObservers()
+                ref.removeAllObservers()
             }
             refreshCheak = false
         }
@@ -114,8 +115,8 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     
     //MARK:-loading data from firebase
     private func loadData(completed:@escaping DownloadComplete){
-        self.ref.child("posts").observe(.value, with:  {(snapshot) in
-      //  self.ref.child("posts").observeSingleEvent(of: .value, with: {(snapshot) in
+     /*   ref.child("posts").observe(.value, with:  {(snapshot) in*/
+        ref.child("posts").observeSingleEvent(of: .value, with: {(snapshot) in
             self.postsArray.removeAll()
             
             if let snaps = snapshot.children.allObjects as? [DataSnapshot] {
@@ -147,6 +148,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
             }
             
         })
+       
         
         
         

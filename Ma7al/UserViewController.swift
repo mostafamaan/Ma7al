@@ -12,7 +12,7 @@ import FBSDKLoginKit
 class UserViewController: UIViewController {
     
     @IBOutlet weak var containerView: UIView!
-    private let ref = Database.database().reference()
+  //  private let ref = Database.database().reference()
     
     let storeImageView : UIImageView = {
        let view = UIImageView()
@@ -78,7 +78,7 @@ class UserViewController: UIViewController {
              let dic = snapshot.value as! [String:Any]
             let shopName = dic["shopName"] as? String
             let phoneNumber = dic["phoneNumber"] as? String
-            print(shopName)
+            print(shopName ?? "" , phoneNumber ?? "")
             
             
         })

@@ -1,0 +1,6 @@
+framework module Pods_Ma7al {
+  umbrella header "Pods-Ma7al-umbrella.h"
+
+  export *
+  module * { export * }
+}

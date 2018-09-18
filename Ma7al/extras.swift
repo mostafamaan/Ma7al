@@ -8,9 +8,10 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 typealias DownloadComplete = () -> ()
-
+let ref = Database.database().reference()
 
 struct Colors {
     let textColor = UIColor(red:0.15, green:0.32, blue:0.54, alpha:1.0)
